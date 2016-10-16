@@ -1,0 +1,31 @@
+What is rest APi
+------------------------------------------
+REST stands for Representational State Transfer. 
+(It is sometimes spelled "ReST".) 
+It relies on a stateless, client-server, cacheable communications protocol ]
+-- and in virtually all cases, 
+the HTTP protocol is used. REST is an architecture style for designing networked applications.
+
+WP REST API DocuMENTATION
+-------------------------
+http://v2.wp-api.org/glossary.html
+https://css-tricks.com/using-the-wp-api-to-fetch-posts/
+---------------------
+a GET request is the equivalent of wp_remote_get(), and a POST request is the same as wp_remote_post().
+
+Resource
+
+A “Resource” is a discrete entity within WordPress. 
+You may know these resources already as Posts, Pages, Comments, Users, Terms, and so on. 
+WP-API permits HTTP clients to perform CRUD operations against resources 
+(CRUD stands for Create, Read, Update, and Delete).
+
+Pragmatically, here’s how you’d typically interact with WP-API resources:
+-------------------------------------------------------------------------
+GET /wp-json/wp/v2/posts to get a collection of Posts. This is roughly equivalent to using WP_Query.
+
+GET /wp-json/wp/v2/posts/123 to get a single Post with ID 123. This is roughly equivalent to using get_post().
+
+POST /wp-json/wp/v2/posts to create a new Post. This is roughly equivalent to using wp_insert_post().
+
+DELETE /wp-json/wp/v2/posts/123 to delete Post with ID 123. This is roughly equivalent to wp_delete_post().
