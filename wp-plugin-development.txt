@@ -1,0 +1,19 @@
+http://www.hongkiat.com/blog/beginners-guide-to-wordpress-plugin-development/
+----------------------------------------------------------------------------------
+When creating a new plugin you’ll need to start with a simple PHP file. 
+This can be named anything but should generally reflect your plug-in’s official name. 
+So for example I have created our base code and have named my file hongkiat-excerpt.phps.
+
+The first lines of your plug-in must be comment information for the parsing engine. 
+This is extremely important as WordPress will be unable to process your file without. 
+Below is an example code snippit you can copy and mold towards your own.
+
+<?php
+/*
+Plugin Name: Plugin Name here
+Plugin URI: http://www.yourpluginurlhere.com/
+Version: Current Version
+Author: Name please
+Description: What does your plugin do and what features does it offer...
+*/
+?>
