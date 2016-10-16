@@ -1,0 +1,18 @@
+<div class="col-xs-12" >
+		<h1>{{page_title}}</h1>
+	</div>
+	<div class="col-xs-12">
+		<div class="row" >
+			<div class="col-sm-3" ng-repeat="web in webs">
+				<h3>{{ web.title.rendered }}</h3>
+				<div>
+					<img ng-src="{{ web.acf.thumbnail.url }}" alt="" title="" class="img-responsive"/>
+				</div>
+				<div ng-bind-html="web.excerpt.rendered | to_trusted"></div>
+				<div>
+					<a ui-sref="detail({id: web.id})" title="">View</a>
+				</div>
+				
+			</div>
+		</div>
+</div>

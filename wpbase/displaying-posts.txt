@@ -1,0 +1,70 @@
+Source : https://www.smashingmagazine.com/2012/11/complete-guide-custom-post-types/
+DISPLAYING POSTS 
+
+// codex Querying by Post Type
+$args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+  the_title();
+  echo '<div class="entry-content">';
+  the_content();
+  echo '</div>';
+endwhile;
+
+
+Custom Post Types in the Main Query
+
+// Show posts of 'post', 'page' and 'movie' post types on home page
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+
+function add_my_post_types_to_query( $query ) {
+  if ( is_home() && $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'page', 'movie' ) );
+  return $query;
+}
+
+
+archive-[post_type].php
+single-[post_type].php
+
+
+<?php
+    $args = array(
+      'post_type' => 'product',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'product_category',
+          'field' => 'slug',
+          'terms' => 'boardgames'
+        )
+      )
+    );
+    $products = new WP_Query( $args );
+    if( $products->have_posts() ) {
+      while( $products->have_posts() ) {
+        $products->the_post();
+        ?>
+          <h1><?php the_title() ?></h1>
+          <div class='content'>
+            <?php the_content() ?>
+          </div>
+        <?php
+      }
+    }
+    else {
+      echo 'Oh ohm no products!';
+    }
+  ?>
+
+DISPLAYING METADATA
+
+<?php
+  // If we are in a loop we can get the post ID easily
+  $price = get_post_meta( get_the_ID(), 'product_price', true );
+
+  // To get the price of a random product we will need to know the ID
+  $price = get_post_meta( $product_id, 'product_price', true );
+?>
+
+
+

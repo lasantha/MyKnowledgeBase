@@ -1,0 +1,12 @@
+<section class="artistInfo">
+	<div class="artist cf" ng-model="artists">
+		<h1>{{artists.name}}</h1>
+		<div class="info">
+			<h3>{{artists.reknown}}</h3>
+			<img src="{{ appPath +'images/' +artists.shortname}}_tn.jpg" alt="" title="" class="img-responsive"/>
+			<div class="bio">
+				{{artists.bio}}
+			</div>
+		</div>
+	</div>
+</section>
