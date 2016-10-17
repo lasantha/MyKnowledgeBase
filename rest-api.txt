@@ -8,8 +8,10 @@ the HTTP protocol is used. REST is an architecture style for designing networked
 
 WP REST API DocuMENTATION
 -------------------------
+http://v2.wp-api.org/
 http://v2.wp-api.org/glossary.html
 https://css-tricks.com/using-the-wp-api-to-fetch-posts/
+https://www.sitepoint.com/wp-api/
 ---------------------
 a GET request is the equivalent of wp_remote_get(), and a POST request is the same as wp_remote_post().
 

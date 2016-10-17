@@ -1,0 +1,7 @@
+<!-- posts.php -->
+<div class="col-sm-3" ng-repeat="web in webs">
+	<h2>{{web.title.rendered}}</h2>
+	<a ng-href="{{web.link}}">
+		<img ng-src="{{web.acf.thumbnail.url}}"  class="img-responsive"/>
+	</a>
+</div>

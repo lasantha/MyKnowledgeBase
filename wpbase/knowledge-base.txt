@@ -1,0 +1,10 @@
+https://en.wikipedia.org/wiki/Brute-force_attack
+https://www.owasp.org/index.php/Blocking_Brute_Force_Attacks
+http://learn.onemonth.com/defensive-hacking-how-to-prevent-a-brute-force-attack
+
+
+Sql Injection
+
+http://www.w3schools.com/sql/sql_injection.asp
+
+http://www.acunetix.com/websitesecurity/sql-injection/

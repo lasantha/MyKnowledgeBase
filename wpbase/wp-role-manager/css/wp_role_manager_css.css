@@ -1,0 +1,13 @@
+.container.wprm-wrapper{
+	width: 100%;
+}
+.wprm-wrapper{
+	margin-top: 20px;
+}
+.wprm-wrapper .btn-row{
+	margin-bottom: 20px;
+}
+.wprm-wrapper .panel-title a{
+	display: block;
+	text-decoration: none;
+}
