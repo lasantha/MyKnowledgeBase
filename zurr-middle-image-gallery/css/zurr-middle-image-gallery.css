@@ -1,0 +1,31 @@
+.middle_slider {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	margin-right: 5%;
+	margin-top:7px;
+}
+/*.middle_slider:first-child{
+	margin-right:0.5%;
+}*/
+.middle_slider:last-child{
+	margin-right:0%;
+}
+.middle_slider img {
+	width: 100%;
+	height: auto;
+}
+
+.middle_slider{
+	width: 30%;
+}
+
+/* For smartphones */
+    @media (max-width: 480px) {
+      .middle_slider{
+		width: 100%;
+		height: auto;
+	  }
+	}
