@@ -1,0 +1,13 @@
+https://codex.wordpress.org/Create_A_Network
+
+switch_to_blog(1);
+
+restore_current_blog();
+
+http://www.developersfeed.com/wordpress-interview-questions-and-answers/
+
+https://www.quora.com/WordPress-What-would-be-some-common-interview-questions-asked-to-an-experienced-WordPress-developer
+
+https://www.toptal.com/wordpress/interview-questions
+
+https://github.com/typicode/json-server

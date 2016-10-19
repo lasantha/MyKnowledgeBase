@@ -2,7 +2,17 @@ https://codex.wordpress.org/Widgets_API
 
 When you're ready you can display that Widget Area by inserting the following code into whichever Theme file you desire:
 
-<?php if ( dynamic_sidebar('example_widget_area_name') ) : else : endif; ?>
+<?php if ( dynamic_sidebar('wpd widgets') ) : else : endif; ?>
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'wpd widgets',
+    'before_widget' => '<div class = "widgetizedArea">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  )
+);
+
 
 https://premium.wpmudev.org/blog/how-to-build-wordpress-widgets-like-a-pro/?utm_expid=3606929-87.FQUx5sKvRhKbhK_8_C59WQ.0&utm_referrer=https%3A%2F%2Fwww.google.com%2F
 

@@ -1,0 +1,7 @@
+//* Enable XML/SWF files to be uploaded *//
+function _customUploadMimes( $_ex=array()) {
+	$_ex["xml"] =  "text/xml";
+	$_ex["swf"] =  "application/x-shockwave-flash";
+	return $_ex;
+}
+add_filter("upload_mimes", "_customUploadMimes");
